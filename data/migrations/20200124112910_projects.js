@@ -8,6 +8,7 @@ exports.up = function(knex) {
             table.string('description');
             table.boolean('completed')
                 .defaultTo('false');
+                // do i put this in a string?
         })
         .createTable('resources', table => {
             table.increments();
@@ -30,6 +31,7 @@ exports.up = function(knex) {
             table.string('notes');
             table.boolean('completed')
                 .defaultTo('false');
+                // do i put this in a string?
             table.integer('project_id')
                 .notNullable()
                 .unsigned()
